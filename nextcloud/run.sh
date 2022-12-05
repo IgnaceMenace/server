@@ -1,3 +1,6 @@
+# for fedora server
+sudo sed -i 's/FirewallBackend=nftables/FirewallBackend=iptables/g' /etc/firewalld/firewalld.conf
+sudo systemctl restart firewalld docker
 # For x64 CPUs:
 sudo docker run \
 --sig-proxy=false \
