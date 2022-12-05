@@ -8,7 +8,8 @@ sudo docker run \
 --restart always \
 --publish 8080:8080 \
 -e APACHE_PORT=11000 \
--e SKIP_DOMAIN_VALIDATION=true \
+# if you can't validate your domain uncomment this (but i think you still need to write a domain but it s going to by pass 
+#-e SKIP_DOMAIN_VALIDATION=true \
 --volume nextcloud_aio_mastercontainer:/mnt/docker-aio-config \
 --volume /var/run/docker.sock:/var/run/docker.sock:ro \
 nextcloud/all-in-one:latest
