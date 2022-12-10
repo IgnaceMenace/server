@@ -47,6 +47,7 @@ pip \
 conda \
 htop \
 btop \
+bmon \
 neofetch \
 asciiquarium \
 cmatrix \
