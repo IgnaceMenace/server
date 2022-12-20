@@ -34,7 +34,6 @@ docker-engine \
 
 # Install dependencies and usefull light pckages
 sudo dnf install \
-zsh \
 neovim \
 ranger \
 vim \
@@ -67,9 +66,6 @@ docker-compose-plugin \
 sudo systemctl enable NetworkManager
 sudo systemctl enable docker
 
-# Make Zsh default shell
-sudo chsh -s /bin/zsh $USER
-
 # Install from different sources
 
 ## Install powerlevel10k
@@ -78,10 +74,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ## Install some utilities from pip
 pip install tmuxp
 pip install neovim
-## Install JetBrains patched fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-unzip JetBrainsMono.zip -d JetBrainsMono/
-sudo mv JetBrainsMono /usr/share/fonts/JetBrainsMono
+
 
 # Docker services 
 
