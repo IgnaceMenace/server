@@ -13,6 +13,8 @@ services:
       - /home/admin/docker/caddy/site:/srv
       - /home/admin/docker/caddy/caddy_data:/data
       - /home/admin/docker/caddy/caddy_config:/config
+    networks:
+      - caddy 
 
 volumes:
   caddy_data:
