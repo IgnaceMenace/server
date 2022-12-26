@@ -72,6 +72,8 @@ sudo firewall-cmd --add-port=80/udp
 sudo firewall-cmd --add-port=80/tcp
 sudo firewall-cmd --add-port=443/udp
 sudo firewall-cmd --add-port=80/tcp
+sudo firewall-cmd --runtime-to-permanent
+
 
 # Install from different sources
 
