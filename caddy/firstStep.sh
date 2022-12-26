@@ -7,3 +7,5 @@ touch docker/caddy/Caddyfile
 sudo dnf install 'dnf-command(copr)'
 sudo dnf copr enable @caddy/caddy
 sudo dnf install caddy
+sudo systemctl enable caddy
+sudo systemctl start caddy
