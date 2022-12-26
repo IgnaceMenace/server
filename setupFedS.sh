@@ -71,9 +71,8 @@ sudo systemctl enable docker
 
 ## Install some utilities from pip
 pip install tmuxp
-pip install neovim
 
-# Install caddy
+# Install caddy (bare metal)
 
 sudo dnf install 'dnf-command(copr)'
 sudo dnf copr enable @caddy/caddy
