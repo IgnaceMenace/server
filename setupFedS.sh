@@ -67,6 +67,12 @@ npm \
 sudo systemctl enable NetworkManager
 sudo systemctl enable docker
 
+# Opening ports from firewall
+sudo firewall-cmd --add-port=80/udp
+sudo firewall-cmd --add-port=80/tcp
+sudo firewall-cmd --add-port=443/udp
+sudo firewall-cmd --add-port=80/tcp
+
 # Install from different sources
 
 ## Install some utilities from pip
