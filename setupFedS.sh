@@ -69,11 +69,11 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 # Opening ports from firewall
-sudo firewall-cmd --add-port=80/udp
-sudo firewall-cmd --add-port=80/tcp
-sudo firewall-cmd --add-port=443/udp
-sudo firewall-cmd --add-port=443/tcp
-sudo firewall-cmd --runtime-to-permanent
+#sudo firewall-cmd --add-port=80/udp
+#sudo firewall-cmd --add-port=80/tcp
+#sudo firewall-cmd --add-port=443/udp
+#sudo firewall-cmd --add-port=443/tcp
+#sudo firewall-cmd --runtime-to-permanent
 
 
 # Install from different sources
@@ -85,7 +85,7 @@ pip install tmuxp
 
 sudo dnf install 'dnf-command(copr)'
 sudo dnf copr enable @caddy/caddy -y
-sudo dnf install caddy
+#sudo dnf install caddy
 
 # Docker services 
 
