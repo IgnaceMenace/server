@@ -1,5 +1,12 @@
 # server
 Knowledge, script and config files I need to setup my personal server
+# Base install
+run
+```
+wget https://raw.githubusercontent.com/IgnaceMenace/server/main/setupFedS.sh 
+sudo chmod +x setupFedS.sh
+bash setupFedS.sh
+```
 # Additional config
 ## disable lid switch 
 sudo vim /etc/systemd/logind.conf
