@@ -84,7 +84,7 @@ pip install tmuxp
 # Install caddy (bare metal)
 
 sudo dnf install 'dnf-command(copr)'
-sudo dnf copr enable @caddy/caddy
+sudo dnf copr enable @caddy/caddy -y
 sudo dnf install caddy
 
 # Docker services 
