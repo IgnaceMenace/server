@@ -46,5 +46,4 @@ LidSwitchIgnoreInhibited=yes
 #RemoveIPC=yes
 #InhibitorsMax=8192
 #SessionsMax=8192
-
 ```
