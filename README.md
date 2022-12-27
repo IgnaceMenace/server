@@ -47,3 +47,9 @@ LidSwitchIgnoreInhibited=yes
 #InhibitorsMax=8192
 #SessionsMax=8192
 ```
+
+## List open ports
+```
+firewall-cmd --list-ports
+```
+more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
