@@ -7,6 +7,10 @@ wget https://raw.githubusercontent.com/IgnaceMenace/server/main/setupFedS.sh
 sudo chmod +x setupFedS.sh
 bash setupFedS.sh
 ```
+## Install something from a `docker-compose.yml` file
+```
+sudo docker compose up -d
+```
 # Additional config
 ## disable lid switch 
 ```
