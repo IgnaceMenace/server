@@ -66,6 +66,7 @@ npm \
 # Enable services
 sudo systemctl enable NetworkManager
 sudo systemctl enable docker
+sudo systemctl start docker
 
 # Opening ports from firewall
 sudo firewall-cmd --add-port=80/udp
