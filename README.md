@@ -11,6 +11,11 @@ bash setupFedS.sh
 ```
 sudo docker compose up -d
 ```
+# NginX Proxy manager
+```
+Email:    admin@example.com
+Password: changeme
+```
 # Additional config
 ## disable lid switch 
 ```
