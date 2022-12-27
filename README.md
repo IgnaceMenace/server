@@ -9,7 +9,9 @@ bash setupFedS.sh
 ```
 # Additional config
 ## disable lid switch 
+```
 sudo vim /etc/systemd/logind.conf
+```
 
 ```
 [Login]
