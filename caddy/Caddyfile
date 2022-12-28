@@ -1,6 +1,0 @@
-{
-  email igparmentier@gmail.com
-}
-portainer.ignace-parmentier.cloudns.ph {
-  reverse_proxy portainer:9000
-}
