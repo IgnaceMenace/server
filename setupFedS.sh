@@ -82,6 +82,10 @@ sudo systemctl start docker
 ## Install some utilities from pip
 pip install tmuxp
 
+# Disable lid switch for laptop
+sudo sh -c "echo 'HandleLidSwitch=ignore' >> /etc/systemd/logind.conf"
+sudo sh -c "echo 'LidSwitchIgnoreInhibited=yes' >> /etc/systemd/logind.conf"
+
 # Install caddy (bare metal)
 
 sudo dnf install 'dnf-command(copr)'
