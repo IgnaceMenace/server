@@ -12,7 +12,7 @@ bash setupFedS.sh
 sudo docker compose up -d
 ```
 # NginX Proxy manager
-**Default credential**
+*Default credential*
 ```
 Email:    admin@example.com
 Password: changeme
