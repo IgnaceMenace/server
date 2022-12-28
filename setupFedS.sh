@@ -75,7 +75,7 @@ sudo systemctl start docker
 #sudo firewall-cmd --add-port=443/udp
 #sudo firewall-cmd --add-port=443/tcp
 #sudo firewall-cmd --runtime-to-permanent
-
+# Ends up not being usefull
 
 # Install from different sources
 
@@ -95,6 +95,23 @@ sudo dnf copr enable @caddy/caddy -y
 sudo docker volume create portainer_data
 ### Installing portainer with privilege since we are using SELinux
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --privileged --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
+## Nginx Proxy Manager
+#mkdir -p docker/nginxProxyManager
+#cd docker/nginxProxyManager
+#wget https://raw.githubusercontent.com/IgnaceMenace/server/main/nginxProxyManager/docker-compose.yml
+#sudo docker compose up -d
+#cd
+
 ## Nextcloud
+sudo docker run \
+--sig-proxy=false \
+--name nextcloud-aio-mastercontainer \
+--restart always \
+--publish 8080:8080 \
+-e APACHE_PORT=11000 \
+-v nextcloud_aio_mastercontainer:/mnt/docker-aio-config \
+-v /var/run/docker.sock:/var/run/docker.sock:ro \
+nextcloud/all-in-one:latest
 
 ## Gitlab
