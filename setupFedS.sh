@@ -78,6 +78,10 @@ sudo systemctl start docker
 # Ends up not being usefull
 
 # Install from different sources
+## Install Ookla internet speed test 
+## Warning : This one is NOT open source
+#curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
+#sudo dnf install speedtest
 
 ## Install some utilities from pip
 pip install tmuxp
