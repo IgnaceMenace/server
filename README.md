@@ -1,5 +1,9 @@
 # Server
 Knowledge, script and config files I need to setup my personal server
+# Before installing
+- Create a DNS zone
+- Create an A record
+- Make your server local IP Static
 # Base install
 ## Multiple services
 
