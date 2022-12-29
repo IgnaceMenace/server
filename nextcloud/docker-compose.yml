@@ -16,5 +16,5 @@ services:
     environment:
       - APACHE_PORT=11000
       - APACHE_DISABLE_REWRITE_IP=1
-      - NEXTCLOUD_TRUSTED_DOMAINS=myDOMAINNAME.com 192.168.1.19 # change with your domain + proxy host IP
+      - NEXTCLOUD_TRUSTED_DOMAINS=nextcloud.ignace-parmentier.cloudns.ph 192.168.1.19 # change with your domain + proxy host IP
       - TRUSTED_PROXIES=192.168.1.19
