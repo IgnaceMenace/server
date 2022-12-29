@@ -1,11 +1,38 @@
 # server
 Knowledge, script and config files I need to setup my personal server
 # Base install
-run
+## Multiple services
+
+Open the ports
+```
+TCP/UDP => 80
+TCP/UDP => 443
+TCP/UDP => 3478
+TCP/UDP => 8080
+TCP/UDP => 8443
+```
+
+Then run
 ```
 wget https://raw.githubusercontent.com/IgnaceMenace/server/main/setupFedS.sh 
 sudo chmod +x setupFedS.sh
 bash setupFedS.sh
+```
+## Only Nextcloud AIO
+
+Open the ports
+```
+TCP/UDP => 80
+TCP/UDP => 443
+TCP/UDP => 3478
+TCP/UDP => 8080
+TCP/UDP => 8443
+```
+Then run
+```
+wget https://raw.githubusercontent.com/IgnaceMenace/server/main/setupFedSNAIOOnly.sh 
+sudo chmod +x setupFedSNAIOOnly.sh
+bash setupFedSNAIOOnly.sh
 ```
 ## Install something from a `docker-compose.yml` file
 ```
