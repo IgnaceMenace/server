@@ -4,6 +4,8 @@ Knowledge, script and config files I need to setup my personal server
 - Create a DNS zone
 - Create an A record
 - Make your server local IP Static
+- You shouldn't run a script you haven't checked before
+- Please check the script you want to run and edit it to your liking
 # Base install
 ## Multiple services
 
