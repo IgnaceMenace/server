@@ -42,6 +42,11 @@ sudo docker compose up -d
 Email:    admin@example.com
 Password: changeme
 ```
+# Nextcloud
+*Get the Setup Password if lost*
+```
+sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/configuration.json | grep password
+```
 # Additional config
 
 ## List open ports
