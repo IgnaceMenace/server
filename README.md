@@ -8,8 +8,6 @@ Open the ports in your router and your internet provider !
 TCP/UDP => 80
 TCP/UDP => 443
 TCP/UDP => 3478
-TCP/UDP => 8080
-TCP/UDP => 8443
 ```
 
 Then run
