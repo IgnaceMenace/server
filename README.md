@@ -47,6 +47,10 @@ Password: changeme
 ```
 sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/configuration.json | grep password
 ```
+# Useful websites
+[ClouDNS](https://www.cloudns.net/)
+[IPChicken](https://www.ipchicken.com/)
+
 # Additional config
 
 ## List open ports
