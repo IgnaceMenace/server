@@ -3,7 +3,7 @@ Knowledge, script and config files I need to setup my personal server
 # Base install
 ## Multiple services
 
-Open the ports
+Open the ports in your router and your internet provider !
 ```
 TCP/UDP => 80
 TCP/UDP => 443
@@ -20,7 +20,7 @@ bash setupFedS.sh
 ```
 ## Only Nextcloud AIO
 
-Open the ports
+Open the ports in your router and your internet provider !
 ```
 TCP/UDP => 80
 TCP/UDP => 443
