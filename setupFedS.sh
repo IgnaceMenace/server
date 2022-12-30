@@ -55,6 +55,7 @@ nmap \
 tmux \
 foot \
 cockpit-pcp \
+cockpit-podman \
 dnf-automatic \
 dnf-plugins-core \
 docker-ce \
