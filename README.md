@@ -70,4 +70,4 @@ more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 
 # Road Map
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
-- Setup other usefull services (GitLab, Bitwarden, language tool)
+- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, adguard)
