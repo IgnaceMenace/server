@@ -6,14 +6,14 @@ services:
     hostname: 'gitlab.ignace-parmentier.cloudns.ph'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://gitlab.example.com'
+        external_url 'https://gitlab.ignace-parmentier.cloudns.ph'
         # Add any other gitlab.rb configuration here, each on its own line
     ports:
       - '82:80'
       - '444:443'
       - '23:22'
     volumes:
-      - '$GITLAB_HOME/config:/etc/gitlab'
-      - '$GITLAB_HOME/logs:/var/log/gitlab'
-      - '$GITLAB_HOME/data:/var/opt/gitlab'
+      - '$GITLAB_HOME/config:/etc/gitlab:Z'
+      - '$GITLAB_HOME/logs:/var/log/gitlab:Z'
+      - '$GITLAB_HOME/data:/var/opt/gitlab:Z'
     shm_size: '256m'
