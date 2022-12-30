@@ -1,6 +1,10 @@
 # Server
 Knowledge, script and config files I need to setup my personal server
 # Before installing
+- Install Fedora Server
+  - No root account
+  - Encryption isn't required since most services provide their own
+  - Please use a strong password
 - Create a DNS zone
 - Create an A record
 - Make your server local IP Static
@@ -70,4 +74,5 @@ more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 
 # Road Map
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
-- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, adguard)
+- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, adguard, Wireguard)
+- Move to Fedora CoreOS or IoT
