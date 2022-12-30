@@ -22,6 +22,8 @@ wget https://raw.githubusercontent.com/IgnaceMenace/server/main/setupFedS.sh
 sudo chmod +x setupFedS.sh
 bash setupFedS.sh
 ```
+You are now able to access nginx on port 81, portainer on port 9443 and nextcloud on port 8080. 
+Firstly you should create a proxy host on Nginx with an ssl certificate and forward to the port 11000. Then you can go to the port 8080 and launch the instalation ofnextcloud AIO from the interface.
 ## Only Nextcloud AIO
 
 Open the ports in your router and your internet provider !
