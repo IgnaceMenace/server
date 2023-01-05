@@ -3,7 +3,7 @@ Knowledge, script and config files I need to setup my personal server
 # Why ?
 - Self hosted services preserve your privacy
 - Canonical has proven by the past that they aren't the most concerned about freedom, so Ubuntu is shit you better of using Fedora Server
-  - You could easily adapt this script to Arch or Debian but with the first one you won't have the same stability and built in tools and with the second one you will potentially miss some drivers but they are still pretty much as good as Fedora
+  - You could easily adapt this script to Arch or Debian but with the first one you won't have the same stability and built in tools and with the second one you will potentially miss some drivers. That being said, both are still pretty much as good as Fedora
 - Since we are far from a fully decentralized internet you need to be able to host your services
 - Free terabytes of cloud storage if you collect old hardware
 
