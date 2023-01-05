@@ -56,9 +56,7 @@ sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/config
 
 [IPChicken](https://www.ipchicken.com/)
 
-# Additional config
-
-## List open ports
+# List open ports on Fedora
 ```
 sudo firewall-cmd --list-ports
 ```
