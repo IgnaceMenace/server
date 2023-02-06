@@ -64,6 +64,7 @@ more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 
 # Road Map
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
+https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
 - Update containers with watchtower
 - Setup other usefull services (GitLab, Bitwarden, language tool, synapse, searxNG, adguard, Wireguard, OwnCloud Infinite Scale, Email, I2P, Tor, Nym)
 - Move to Fedora IoT
