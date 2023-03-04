@@ -46,6 +46,19 @@ sudo docker compose up -d
 Email:    admin@example.com
 Password: changeme
 ```
+## Config
+The configuration for your nextcloud proxy
+```
+client_max_body_size 0;
+fastcgi_connect_timeout 60;
+fastcgi_send_timeout 1800;
+fastcgi_read_timeout 1800;
+proxy_connect_timeout 1d;
+proxy_send_timeout 1d;
+proxy_read_timeout 1d;
+send_timeout 1d;
+```
+
 # Nextcloud
 *Get the Setup Password if lost*
 ```
