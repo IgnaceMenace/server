@@ -66,6 +66,24 @@ more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
 https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
 - Update containers with watchtower
-- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, searxNG, adguard, Wireguard, OwnCloud Infinite Scale, Email, I2P, Tor, Nym)
+- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, searxNG, adguard, Wireguard, OwnCloud Infinite Scale, Email, I2P, Tor)
 - Move to Fedora IoT
 - Move from Docker to Podman
+
+# Personal thought
+*After a few month of usage*
+- Nextcloud is slow and buggy
+  - Provides a lot of useless features
+  - Supposedly makes everything less stable than it could be
+  - Written in PHP
+    - I admit I've never used it but
+      - It's slow
+      - A rewrite like Owncloud Infinit Scale could be beneficial
+  - I would like to switch to a better alternative
+    - Syncthing
+    - OCIS
+- Docker is fine a podman doesn't seem to be the easiest way to go at all so I think it will never be used instead of docker and we will just switch to WASM at some point
+- Fedora IoT won't give me anything better than current Fedora Server
+- Security is important so maybe I should considere using Syncthing or OCIS strictly over Wireguard tunnnel
+- Current connection not good enough to install Tor, adguard, searxng etc
+- If I move to OCIS or syncthing a dendrite server could be useful
