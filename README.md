@@ -97,6 +97,6 @@ https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
     - OCIS
 - Docker is fine a podman doesn't seem to be the easiest way to go at all so I think it will never be used instead of docker and we will just switch to WASM at some point
 - Fedora IoT won't give me anything better than current Fedora Server
-- Security is important so maybe I should considere using Syncthing or OCIS strictly over Wireguard tunnnel
+- Security is important so maybe I should considere using Syncthing or OCIS strictly over Wireguard tunnel
 - Current connection not good enough to install Tor, adguard, searxng etc
 - If I move to OCIS or syncthing a dendrite server could be useful
