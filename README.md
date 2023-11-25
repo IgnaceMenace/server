@@ -50,7 +50,7 @@ Password: changeme
 The configuration for your nextcloud proxy
 ```
 client_max_body_size 0;
-fastcgi_connect_timeout 60;
+fastcgi_connect_timeout 600;
 fastcgi_send_timeout 1800;
 fastcgi_read_timeout 1800;
 proxy_connect_timeout 1d;
@@ -76,6 +76,7 @@ sudo firewall-cmd --list-ports
 more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 
 # Road Map
+- Add the wireguard configuration
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
 https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
 - Update containers with watchtower
