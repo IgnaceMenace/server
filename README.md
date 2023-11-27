@@ -64,6 +64,11 @@ send_timeout 1d;
 ```
 sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/configuration.json | grep password
 ```
+## Resolve common error
+- Missing default region
+```
+sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:set default_phone_region --value=BE
+```
 # Useful websites
 [ClouDNS](https://www.cloudns.net/)
 
