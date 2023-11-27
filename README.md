@@ -80,24 +80,21 @@ more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
 https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
 - Update containers with watchtower
-- Setup other usefull services (GitLab, Bitwarden, language tool, synapse, searxNG, adguard, Wireguard, OwnCloud Infinite Scale, Email, I2P, Tor)
-- Move to Fedora IoT
-- Move from Docker to Podman
+- Setup an email server for password reset in nextcloud
+- Setup other usefull services (GitLab, Vault/Bitwarden, language tool, synapse/dendrite, searxNG, adguard, OwnCloud Infinite Scale, Email, I2P, Tor/Arti)
 
 # Personal thought
 *After a few month of usage*
-- Nextcloud is slow and buggy
+- Nextcloud AIO is a great tool to provide most of the services I need but it comes with the downside of being slow and often buggy
+  - Provides a lot of usefull features
   - Provides a lot of useless features
-  - Supposedly makes everything less stable than it could be
   - Written in PHP
     - I admit I've never used it but
       - It's slow
       - A rewrite like Owncloud Infinit Scale could be beneficial
+      - When the image preview is triggered, everything becomes clow and sometime it even crashes
+  - AI features
+  - You can't upload a folder by clicking on "new/import/folder" which is absurd
   - I would like to switch to a better alternative
-    - Syncthing
-    - OCIS
-- Docker is fine a podman doesn't seem to be the easiest way to go at all so I think it will never be used instead of docker and we will just switch to WASM at some point
-- Fedora IoT won't give me anything better than current Fedora Server
-- Security is important so maybe I should considere using Syncthing or OCIS strictly over Wireguard tunnel
-- Current connection not good enough to install Tor, adguard, searxng etc
-- If I move to OCIS or syncthing a dendrite server could be useful
+    - Syncthing (only for synchronisation so I have to host more services on the side)
+    - OCIS (not advanced enough for now but will probably be good at some point and is much faster)
