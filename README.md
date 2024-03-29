@@ -44,6 +44,12 @@ bash setupFedS.sh
 You are now able to access nginx on port 81, portainer on port 9443 and nextcloud on port 8080. 
 Firstly you should create a proxy host on Nginx with an ssl certificate and forward to the port 11000. Then you can go to the port 8080 with https and launch the installation of nextcloud AIO from the interface.
 
+## List open ports on Fedora
+```
+sudo firewall-cmd --list-ports
+```
+more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
+
 ## Install something from a `docker-compose.yml` file
 ```
 sudo docker compose up -d
@@ -80,15 +86,8 @@ sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:s
 ```
 
 # Useful websites
-[ClouDNS](https://www.cloudns.net/)
-
-[IPChicken](https://www.ipchicken.com/)
-
-# List open ports on Fedora
-```
-sudo firewall-cmd --list-ports
-```
-more info [here](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/)
+- [ClouDNS](https://www.cloudns.net/)
+- [IPChicken](https://www.ipchicken.com/)
 
 # Road Map
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
