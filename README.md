@@ -103,7 +103,12 @@ https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
   - I2P and Tor/Arti
   - Watchtower for automatic updates
   - Servarr stack
-  - Pfsense
+  - Pfsense (requires its own hardware)
+  - Fail2Ban
+  - Wikipedia clone
+  - DNF mirror
+  - Fediverse stack
+  - Grafana
 - Think about switching as much container as possible to podman
   - Not needed at all, just for fun
 
