@@ -102,6 +102,8 @@ https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
   - Email for password reset on nextcloud
   - I2P and Tor/Arti
   - Watchtower for automatic updates
+  - Servarr stack
+  - Pfsense
 - Think about switching as much container as possible to podman
   - Not needed at all, just for fun
 
