@@ -1,4 +1,4 @@
-# DNF tweak
+# DNF tweak for performance
 sudo cat >> /etc/dnf/dnf.conf << EOF                                                                         
 fastestmirror=true                                                                                           
 max_parrallel_downloads=10                                                                                                                                                                                         
@@ -36,16 +36,13 @@ docker-engine \
 
 # Install dependencies and usefull light pckages
 sudo dnf install \
-neovim \
 ranger \
-vim \
 util-linux-user \
 NetworkManager \
 NetworkManager-tui \
 mc \
 toolbox \
 pip \
-conda \
 htop \
 btop \
 bmon \
@@ -64,7 +61,6 @@ docker-ce \
 docker-ce-cli \
 containerd.io \
 docker-compose-plugin \
-npm \
 -y 
 
 # Enable services
@@ -87,17 +83,13 @@ sudo systemctl start docker
 #sudo dnf install speedtest
 
 ## Install some utilities from pip
-pip install tmuxp
+#tmuxp for automated tmux config
+#pip install tmuxp
 
 # Disable lid switch for laptop
+# If your server is a laptop you need to run this to prevent it to suspend when closed
 sudo sh -c "echo 'HandleLidSwitch=ignore' >> /etc/systemd/logind.conf"
 sudo sh -c "echo 'LidSwitchIgnoreInhibited=yes' >> /etc/systemd/logind.conf"
-
-# Install caddy (bare metal)
-
-sudo dnf install 'dnf-command(copr)'
-sudo dnf copr enable @caddy/caddy -y
-#sudo dnf install caddy
 
 # Docker services 
 
