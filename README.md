@@ -61,7 +61,7 @@ Email:    admin@example.com
 Password: changeme
 ```
 ## Config
-The configuration for your nextcloud proxy
+*The configuration for your nextcloud proxy*
 ```
 client_max_body_size 0;
 fastcgi_connect_timeout 600;
