@@ -1,6 +1,6 @@
 *Knowledge, script and config files I need to setup my personal server.*
 
-# Why ?
+# Why
 - Self hosted services preserve your privacy
 - Since we are far from a fully decentralized internet you need to be able to host your services to keep control
 - Free terabytes of cloud storage if you collect old hardware
