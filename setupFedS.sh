@@ -1,8 +1,10 @@
 # DNF tweak for performance
+sudo su
 sudo cat >> /etc/dnf/dnf.conf << EOF                                                                         
 fastestmirror=true                                                                                           
 max_parrallel_downloads=10                                                                                                                                                                                         
 EOF
+exit
 sudo dnf clean all
 
 # Update system
