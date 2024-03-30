@@ -92,6 +92,9 @@ sudo sh -c "echo 'HandleLidSwitch=ignore' >> /etc/systemd/logind.conf"
 sudo sh -c "echo 'LidSwitchIgnoreInhibited=yes' >> /etc/systemd/logind.conf"
 
 # Docker services 
+cd ./src
+sudo docker compose up -d
+
 
 ## Portainer
 ### Creating volume for database
