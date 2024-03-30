@@ -1,11 +1,25 @@
-version: "3.8"
-
 volumes:
   etc_wireguard:
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer
+  gitlab_vol:
+    name: Gitlab_Home
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/srv/gitlab'
 
 services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - '9443:9443'
+      - '8000:8000'
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
   nextcloud:
     image: nextcloud/all-in-one:latest
     restart: always
@@ -67,36 +81,36 @@ services:
       MYSQL_PASSWORD: 'npm'
     volumes:
       - ./data/mysql:/var/lib/mysql
-  
   ## it is not configured yet !!!!!!!!!!!
   gitlab:
-    image: gitlab/gitlab-ee:<version>-ee.0
+    image: gitlab/gitlab-ce:latest
     container_name: gitlab
     restart: always
-    hostname: 'gitlab.example.com'
+    hostname: 'localhost'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        # Add any other gitlab.rb configuration here, each on its own line
-        external_url 'https://gitlab.example.com'
+        external_url 'http://localhost'
     ports:
-      - '80:80'
-      - '443:443'
-      - '22:22'
+      - '8082:80'
+      - '8043:443'
+      - '8022:22'
     volumes:
-      - '$GITLAB_HOME/config:/etc/gitlab'
-      - '$GITLAB_HOME/logs:/var/log/gitlab'
-      - '$GITLAB_HOME/data:/var/opt/gitlab'
+      - '/srv/gitlab/config:/etc/gitlab'
+      - '/srv/gitlab/logs:/var/log/gitlab'
+      - '/srv/gitlab/data:/var/opt/gitlab'
     shm_size: '256m'
 
   ## add the priviledge flag and maybe other config
-  portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - 9443:9443
-      volumes:
-        - data:/data
-        - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
+#  portainer:
+#    image: portainer/portainer-ce:latest
+#    ports:
+#      - '9443:9443'
+#      - '8000:8000'
+#      volumes:
+#        - data:/data
+#        - /var/run/docker.sock:/var/run/docker.sock
+#    restart: unless-stopped
+#    priviledged: true
   
   # You probably have to configure it and you don't want to break NC AIO watchtower
   watchtower:
@@ -107,10 +121,10 @@ services:
     environment:
       # Change Language:
       # (Supports: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi)
-      - LANG=de
+      - LANG=en
       # ⚠️ Required:
       # Change this to your host's public address
-      - WG_HOST=raspberrypi.local
+      - WG_HOST=localhost
 
       # Optional:
       # - PASSWORD=foobar123
