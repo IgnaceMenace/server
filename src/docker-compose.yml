@@ -9,14 +9,6 @@ volumes:
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer
 
-  gitlab_vol:
-    name: Gitlab_Home
-    driver: local
-    driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '/srv/gitlab'
-
 services:
 
   portainer:
@@ -96,25 +88,6 @@ services:
       MYSQL_PASSWORD: 'npm'
     volumes:
       - ./mysql:/var/lib/mysql # instead of ./data/mysql:/var/lib/mysql
-  
-  ## it is not configured yet !!!!!!!!!!!
-  gitlab:
-    container_name: gitlab
-    image: gitlab/gitlab-ce:latest
-    restart: always
-    hostname: 'localhost'
-    environment:
-      GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://localhost'
-    ports:
-      - '8082:80'
-      - '8043:443'
-      - '8022:22'
-    volumes:
-      - '/srv/gitlab/config:/etc/gitlab'
-      - '/srv/gitlab/logs:/var/log/gitlab'
-      - '/srv/gitlab/data:/var/opt/gitlab'
-    shm_size: '256m'
 
   # You need to configure the time of update and exclude nextcloud aio but it is going to spawn some other containre so maybe 
   # only update the container that are specified is a good idea
