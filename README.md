@@ -1,7 +1,3 @@
-BEFORE MERGING TO MAIN
-Give the proper flag to watchtower to specify the containers to update
-gitlab needs better config
-
 *Knowledge, script and config files I need to setup my personal server.*
 
 # Why
@@ -95,15 +91,21 @@ sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:s
 - [IPChicken](https://www.ipchicken.com/)
 
 # Road Map
+- High priority
+  - Better volume management
+  - Better network isolation
+  - Watchtower
+    - Update flag for container to update
+    - Timezone
+    - Schedule config
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
 https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
-- Proper network isolation of each services
-- Add choice in the bash script to compose the extended or minimal config
-- Setup other services
+- Add choice in the bash script to compose the **extended** or minimal config
+- Setup other services (**extended**)
   - Gitlab for version control
   - Vault/Bitwarden
   - Language tool for grammar and spelling check
-  - ESS (matrix) for global communication
+  - Element Starter (matrix) for global communication
   - SearXNG
   - Adguard
   - Email for password reset on nextcloud
