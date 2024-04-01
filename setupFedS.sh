@@ -1,8 +1,10 @@
 # DNF tweak for performance
+sudo su
 sudo cat >> /etc/dnf/dnf.conf << EOF                                                                         
 fastestmirror=true                                                                                           
 max_parrallel_downloads=10                                                                                                                                                                                         
 EOF
+exit
 sudo dnf clean all
 
 # Update system
@@ -92,6 +94,9 @@ sudo sh -c "echo 'HandleLidSwitch=ignore' >> /etc/systemd/logind.conf"
 sudo sh -c "echo 'LidSwitchIgnoreInhibited=yes' >> /etc/systemd/logind.conf"
 
 # Docker services 
+cd ./src
+sudo docker compose up -d
+
 
 ## Portainer
 ### Creating volume for database

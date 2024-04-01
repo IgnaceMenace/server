@@ -1,3 +1,7 @@
+BEFORE MERGING TO MAIN
+Give the proper flag to watchtower to specify the containers to update
+gitlab needs better config
+
 *Knowledge, script and config files I need to setup my personal server.*
 
 # Why
@@ -13,6 +17,7 @@
 - Portainer
 - Cockpit
 - Wireguard Easy
+- Watchtower
 Nextcloud AIO probably has all the feature you need, you can even install some additional community containers for additional unsupported features
 
 # Before installing
@@ -92,6 +97,8 @@ sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:s
 # Road Map
 - Find a way to decrypt hard drive automatically or at distance when fedora does a reboot after update
 https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
+- Proper network isolation of each services
+- Add choice in the bash script to compose the extended or minimal config
 - Setup other services
   - Gitlab for version control
   - Vault/Bitwarden
@@ -109,8 +116,9 @@ https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
   - DNF mirror
   - Fediverse stack
   - Grafana
-- Think about switching as much container as possible to podman
-  - Not needed at all, just for fun
+- Work on migrating to Podman
+  - Not needed at all, just to learn
+  - Create podman systemd units etc
 
 # Personal thought
 *After a few years of usage*
