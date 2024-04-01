@@ -1,3 +1,7 @@
+BEFORE MERGING TO MAIN
+Update a compose.yml for each individual services (just in case)
+Give the proper flag to watchtower to specify the containers to update
+gitlab needs better config
 *Knowledge, script and config files I need to setup my personal server.*
 
 # Why
