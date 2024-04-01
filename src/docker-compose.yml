@@ -1,7 +1,14 @@
 volumes:
+
+  portainer_data:
+    name: portainer_data
+
   etc_wireguard:
+    name: etc_wireguard
+
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer
+
   gitlab_vol:
     name: Gitlab_Home
     driver: local
@@ -11,7 +18,9 @@ volumes:
       device: '/srv/gitlab'
 
 services:
+
   portainer:
+    container_name: portainer
     image: portainer/portainer-ce:latest
     ports:
       - '9443:9443'
@@ -20,10 +29,12 @@ services:
       - portainer_data:/data
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
+    privileged: true
+
   nextcloud:
+    container_name: nextcloud-aio-mastercontainer
     image: nextcloud/all-in-one:latest
     restart: always
-    container_name: nextcloud-aio-mastercontainer
     volumes:
       - nextcloud_aio_mastercontainer:/mnt/docker-aio-config
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -48,7 +59,9 @@ services:
       # - NEXTCLOUD_ADDITIONAL_PHP_EXTENSIONS=imagick # This allows to add additional php extensions to the Nextcloud container permanently. Default is imagick but can be overwritten by modifying this value. See https://github.com/nextcloud/all-in-one#how-to-add-php-extensions-permanently-to-the-nextcloud-container
       # - NEXTCLOUD_ENABLE_DRI_DEVICE=true # This allows to enable the /dev/dri device in the Nextcloud container which is needed for hardware-transcoding. See https://github.com/nextcloud/all-in-one#how-to-enable-hardware-transcoding-for-nextcloud
       # - TALK_PORT=3478 # This allows to adjust the port that the talk container is using.
+  
   nginxpm:
+    container_name: nginx_proxy_manager
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
@@ -59,7 +72,7 @@ services:
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
     environment:
-      DB_MYSQL_HOST: "db"
+      DB_MYSQL_HOST: "nginxdb"
       DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: "npm"
       DB_MYSQL_PASSWORD: "npm"
@@ -71,7 +84,9 @@ services:
       - ./letsencrypt:/etc/letsencrypt
     depends_on:
       - nginxdb
+  
   nginxdb:
+    container_name: maria_db_npm
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
     environment:
@@ -80,11 +95,12 @@ services:
       MYSQL_USER: 'npm'
       MYSQL_PASSWORD: 'npm'
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql # instead of ./data/mysql:/var/lib/mysql
+  
   ## it is not configured yet !!!!!!!!!!!
   gitlab:
-    image: gitlab/gitlab-ce:latest
     container_name: gitlab
+    image: gitlab/gitlab-ce:latest
     restart: always
     hostname: 'localhost'
     environment:
@@ -100,24 +116,16 @@ services:
       - '/srv/gitlab/data:/var/opt/gitlab'
     shm_size: '256m'
 
-  ## add the priviledge flag and maybe other config
-#  portainer:
-#    image: portainer/portainer-ce:latest
-#    ports:
-#      - '9443:9443'
-#      - '8000:8000'
-#      volumes:
-#        - data:/data
-#        - /var/run/docker.sock:/var/run/docker.sock
-#    restart: unless-stopped
-#    priviledged: true
-  
-  # You probably have to configure it and you don't want to break NC AIO watchtower
+  # You need to configure the time of update and exclude nextcloud aio but it is going to spawn some other containre so maybe 
+  # only update the container that are specified is a good idea
   watchtower:
+    container_name: watchtower
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  
   wg-easy:
+    container_name: wg-easy
     environment:
       # Change Language:
       # (Supports: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi)
@@ -141,9 +149,7 @@ services:
       # - WG_POST_DOWN=echo "Post Down" > /etc/wireguard/post-down.txt
       # - UI_TRAFFIC_STATS=true
       # - UI_CHART_TYPE=0 (0 # Charts disabled, 1 # Line chart, 2 # Area chart, 3 # Bar chart)
-
     image: ghcr.io/wg-easy/wg-easy
-    container_name: wg-easy
     volumes:
       - etc_wireguard:/etc/wireguard
     ports:
