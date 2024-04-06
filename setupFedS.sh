@@ -59,6 +59,7 @@ cockpit-pcp \
 cockpit-podman \
 dnf-automatic \
 dnf-plugins-core \
+dnf-plugin-system-upgrade \
 docker-ce \
 docker-ce-cli \
 containerd.io \
