@@ -85,7 +85,14 @@ sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/config
 ```
 sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:set default_phone_region --value=BE
 ```
-
+## Upgrade Fedora
+```
+sudo dnf upgrade --refresh
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf system-upgrade download --releasever=39
+sudo dnf --refresh upgrade
+```
+Don't forget to specify the release server
 # Useful websites
 - [ClouDNS](https://www.cloudns.net/)
 - [IPChicken](https://www.ipchicken.com/)
