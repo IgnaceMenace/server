@@ -85,7 +85,11 @@ sudo cat /var/lib/docker/volumes/nextcloud_aio_mastercontainer/_data/data/config
 ```
 sudo docker exec --user www-data nextcloud-aio-nextcloud php occ config:system:set default_phone_region --value=BE
 ```
-## Upgrade Fedora
+# Update WG-easy
+```
+```
+To be completed but basically run stop and rm the container then download the latest image and the run it with the command BUT WARNING, u have to put the hash password and not the password anymore.
+# Upgrade Fedora
 ```
 sudo dnf upgrade --refresh
 sudo dnf install dnf-plugin-system-upgrade
