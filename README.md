@@ -1,6 +1,10 @@
 BEFORE MERGING TO MAIN
 Give the proper flag to watchtower to specify the containers to update
 gitlab needs better config
+Implement auto disk decrypt
+Implement local use of nextcloud AIO
+Switch to caddy
+
 
 *Knowledge, script and config files I need to setup my personal server.*
 
